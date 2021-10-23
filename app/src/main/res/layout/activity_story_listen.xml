@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/parent_constraint"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/gradient_background">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAlignment="center"
+        android:text="Наименование истории"
+        android:id="@+id/nameStory"
+        android:layout_marginTop="40sp"
+        android:layout_marginLeft="20sp"
+        android:layout_marginRight="20sp"
+        android:layout_gravity="center"
+        android:textColor="@color/white"
+        android:textSize="40sp" />
+
+    <ImageView
+        android:layout_width="300sp"
+        android:layout_height="400sp"
+        android:scaleType="fitCenter"
+        android:layout_marginTop="20sp"
+        android:layout_gravity="center"
+        android:id="@+id/imageStory"
+        android:src="@drawable/kids_game"/>
+    <SeekBar
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/seekBar"
+        android:layout_marginTop="50sp"
+        android:layout_marginLeft="50sp"
+        android:layout_marginRight="50sp"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginBottom="50sp"
+        android:layout_marginLeft="50sp"
+        android:layout_marginRight="50sp"
+        android:gravity="center"
+        >
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="0:00"
+        android:layout_gravity="left"
+        android:id="@+id/textView2"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:layout_marginLeft="420sp"
+        android:text="0:00"
+        android:id="@+id/textView3"
+        android:layout_gravity="right"/>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_horizontal"
+        >
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/rewind"
+            android:id="@+id/button4"
+            android:layout_marginEnd="5sp"
+            android:gravity="center"/>
+
+        <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/pause"
+        android:id="@+id/button2"
+        android:layout_marginEnd="5sp"
+        android:gravity="center"/>
+
+        <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/back"
+        android:id="@+id/button3"
+        android:layout_marginEnd="5sp"
+        android:gravity="center"/>
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/forward"
+            android:id="@+id/button"
+            android:gravity="center"/>
+    </LinearLayout>
+
+</LinearLayout>
