@@ -74,6 +74,8 @@ public class MatchingGame {
         Collections.shuffle(valImages);
         // Go through lists
         for(int i=0; i < keyImages.size(); i++){
+            Log.d("key", keyImages.toString());
+            Log.d("val", valImages.toString());
             AddImageButtonToLayout(100+i, keyImages.get(i), mKeyLayout);
             AddImageButtonToLayout(200+i, valImages.get(i), mValLayout);
         }
@@ -219,7 +221,14 @@ public class MatchingGame {
                         .into(new GifDrawableImageViewTarget(mImageView, 3, true));
                 mBackButton.setVisibility(View.VISIBLE);
             }
+            else{
+
+            }
         }
+    }
+
+    private void tryAgain(){
+
     }
 
     private Boolean getResult(){

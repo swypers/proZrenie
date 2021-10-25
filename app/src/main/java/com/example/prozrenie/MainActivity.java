@@ -18,9 +18,6 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         addListenerOnButton();
-
-        Intent intent = new Intent(this, MatchGameActivity.class);
-        this.startActivity(intent);
     }
     @Override
     public void onBackPressed() {
