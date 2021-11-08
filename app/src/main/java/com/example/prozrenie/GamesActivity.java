@@ -14,7 +14,7 @@ public class GamesActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_games);
-        gamesList.add(new Games("Соедини", R.drawable.tiger, MatchGameChooseActivity.class));
+        gamesList.add(new Games("Найди пару", R.drawable.match_logo, MatchGameChooseActivity.class));
 
         RecyclerView rvDocuments = (RecyclerView) findViewById(R.id.games_list);
 

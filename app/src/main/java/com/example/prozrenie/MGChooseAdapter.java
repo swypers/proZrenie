@@ -43,6 +43,8 @@ public class MGChooseAdapter extends RecyclerView.Adapter<MGChooseAdapter.ViewHo
                                                                MatchGameActivity.class);
                                                        intent.putExtra("imageDictionary",
                                                                (new Gson()).toJson(game_type));
+                                                       intent.putExtra("Name", game_type.getName());
+                                                       intent.putExtra("Sound", game_type.getSound());
                                                        context.startActivity(intent);
                                                    }
                                                }

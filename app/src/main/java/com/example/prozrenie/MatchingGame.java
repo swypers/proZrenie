@@ -14,11 +14,13 @@ import android.widget.LinearLayout;
 
 import com.bumptech.glide.Glide;
 
+import java.sql.Ref;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collection;
 import java.util.Collections;
 import java.util.HashMap;
+import java.util.HashSet;
 import java.util.Map;
 import java.util.Set;
 import java.util.Stack;
@@ -32,14 +34,15 @@ public class MatchingGame {
     private ImageView mImageView;
     private ImageButton mHelpButton;
     private ImageButton mBackButton;
+    private ImageButton mRefreshButton;
 
     private Integer borderPressed = R.drawable.selected_item;
     private Integer borderPurple = R.drawable.border_purple;
 
-    LinearLayout.LayoutParams lp = new LinearLayout.LayoutParams(120*2, 120*2);
+    LinearLayout.LayoutParams lp = new LinearLayout.LayoutParams(150*2, 150*2);
     private Integer chosenKey = 0;
     private Integer chosenVal = 0;
-    private Map<Integer, ImageButton> mButtonDict = new HashMap<Integer, ImageButton>();
+    public Map<Integer, ImageButton> mButtonDict = new HashMap<Integer, ImageButton>();
     private Map<Integer, Integer> mResultDict = new HashMap<Integer, Integer>();
     private Stack<Integer> borderStack = new Stack<>();
     private MediaPlayer mp;
@@ -48,7 +51,8 @@ public class MatchingGame {
 
     public MatchingGame(String name, Map<Integer, Integer> imageDict, LinearLayout keyLayout,
                         LinearLayout valLayout, Integer SoundHelp, ImageView imageView,
-                        Context context, ImageButton HelpButton, ImageButton BackButton) {
+                        Context context, ImageButton HelpButton, ImageButton BackButton,
+                        ImageButton RefreshButton) {
         mName = name;
         mImageDict = imageDict;
         mSoundHelp = SoundHelp;
@@ -59,6 +63,7 @@ public class MatchingGame {
         mContext = context;
         mHelpButton = HelpButton;
         mBackButton = BackButton;
+        mRefreshButton = RefreshButton;
     }
 
     //link to activity
@@ -74,8 +79,6 @@ public class MatchingGame {
         Collections.shuffle(valImages);
         // Go through lists
         for(int i=0; i < keyImages.size(); i++){
-            Log.d("key", keyImages.toString());
-            Log.d("val", valImages.toString());
             AddImageButtonToLayout(100+i, keyImages.get(i), mKeyLayout);
             AddImageButtonToLayout(200+i, valImages.get(i), mValLayout);
         }
@@ -103,6 +106,12 @@ public class MatchingGame {
                                     activity.onBackPressed();
                                 }
                             });
+        mRefreshButton.setOnClickListener(new View.OnClickListener() {
+                                @Override
+                                public void onClick(View view) {
+                                    tryAgain();
+                                }
+                            });
     }
 
     private void playHelpSound(){
@@ -110,6 +119,7 @@ public class MatchingGame {
     }
 
     private void fillBorderStack(){
+        borderStack.clear();
         Integer[] borders = {R.drawable.border_coral, R.drawable.border_emerald,
                 R.drawable.border_pink, R.drawable.border_yellowred};
         for (Integer border: borders)
@@ -129,7 +139,6 @@ public class MatchingGame {
         btn.setOnClickListener(new View.OnClickListener() {
                                     @Override
                                     public void onClick(View view) {
-                                        Log.d("btn", "its works"+Integer.toString(view.getId()));
                                         onClickItem(view);
                                     }
                                 }
@@ -222,13 +231,24 @@ public class MatchingGame {
                 mBackButton.setVisibility(View.VISIBLE);
             }
             else{
-
+                mRefreshButton.setVisibility(View.VISIBLE);
             }
         }
     }
 
     private void tryAgain(){
-
+        fillBorderStack();
+        for (Integer id: mButtonDict.keySet()) {
+            ImageButton currentButton;
+            currentButton = mButtonDict.get(id);
+            clearButton(currentButton);
+        }
+        mResultDict.clear();
+        mRefreshButton.setVisibility(View.INVISIBLE);
+    }
+    private void clearButton(ImageButton btn){
+        btn.setBackground(null);
+        btn.setEnabled(true);
     }
 
     private Boolean getResult(){
