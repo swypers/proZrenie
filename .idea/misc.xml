@@ -17,14 +17,18 @@
         <entry key="app/src/main/res/drawable/button_style.xml" value="0.23166666666666666" />
         <entry key="app/src/main/res/drawable/button_theme.xml" value="0.23166666666666666" />
         <entry key="app/src/main/res/drawable/gradient_background.xml" value="0.23166666666666666" />
+        <entry key="app/src/main/res/drawable/logo_gradient_background.xml" value="0.33125" />
         <entry key="app/src/main/res/drawable/round_corner.xml" value="0.14479166666666668" />
         <entry key="app/src/main/res/drawable/selected_item.xml" value="0.14479166666666668" />
         <entry key="app/src/main/res/layout/activity_audio_stories.xml" value="0.12537993920972645" />
+        <entry key="app/src/main/res/layout/activity_choose_game.xml" value="0.1820388349514563" />
+        <entry key="app/src/main/res/layout/activity_choose_right_game_choose.xml" value="0.1820388349514563" />
+        <entry key="app/src/main/res/layout/activity_crgactivity.xml" value="0.1820388349514563" />
         <entry key="app/src/main/res/layout/activity_document_choose.xml" value="0.1" />
         <entry key="app/src/main/res/layout/activity_document_read.xml" value="0.1" />
         <entry key="app/src/main/res/layout/activity_games.xml" value="0.1328125" />
         <entry key="app/src/main/res/layout/activity_kids_choose.xml" value="0.1" />
-        <entry key="app/src/main/res/layout/activity_main.xml" value="0.1" />
+        <entry key="app/src/main/res/layout/activity_main.xml" value="0.29286769226332443" />
         <entry key="app/src/main/res/layout/activity_match_game.xml" value="0.21502347417840376" />
         <entry key="app/src/main/res/layout/activity_match_game_choose.xml" value="0.1941747572815534" />
         <entry key="app/src/main/res/layout/activity_parents_document.xml" value="0.12537993920972645" />

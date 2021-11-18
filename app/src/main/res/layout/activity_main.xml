@@ -13,24 +13,32 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
+        android:layout_marginTop="10px"
         android:gravity="center"
-        android:background="@drawable/gradient_background"
+        android:weightSum="1"
+        android:background="@null"
         android:paddingBottom="10dp"
         >
         <ImageView
-            android:layout_width="160dp"
-            android:layout_height="160dp"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.3"
             android:layout_marginStart="20dp"
             android:layout_gravity="center_horizontal"
             android:src="@drawable/eye"/>
         <TextView
-            android:layout_width="wrap_content"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
+            android:layout_weight="0.7"
             android:layout_gravity="center"
-            android:layout_marginStart="30sp"
+            android:layout_marginStart="10sp"
             android:text="@string/app_label"
             android:maxLines="1"
             android:textColor="@color/white"
+            android:autoSizeTextType="uniform"
+            android:autoSizeMinTextSize="6sp"
+            android:autoSizeMaxTextSize="100sp"
+            android:autoSizeStepGranularity="2sp"
             android:textSize="70sp"
             android:textStyle="italic"
             />
@@ -42,28 +50,18 @@
         android:layout_gravity="center"
         android:orientation="horizontal">
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:orientation="vertical">
-
-            <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:orientation="horizontal">
-
                 <LinearLayout
-                    android:layout_width="wrap_content"
+                    android:layout_width="0dp"
                     android:layout_height="wrap_content"
+                    android:layout_weight="6"
                     android:layout_gravity="center"
                     android:orientation="vertical">
 
                     <ImageButton
                         android:id="@+id/btn_parent"
                         android:layout_width="match_parent"
-                        android:layout_height="200sp"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
                         android:layout_gravity="center"
                         android:background="@null"
                         android:scaleType="fitCenter"
@@ -73,9 +71,13 @@
                     <TextView
                         android:id="@+id/text_parent"
                         android:layout_width="wrap_content"
-                        android:layout_height="50sp"
+                        android:layout_height="match_parent"
                         android:layout_gravity="center"
                         android:text="Родителям"
+                        android:autoSizeTextType="uniform"
+                        android:autoSizeMinTextSize="6sp"
+                        android:autoSizeMaxTextSize="50sp"
+                        android:autoSizeStepGranularity="2sp"
                         android:textColor="@color/white"
                         android:textAlignment="center"
                         android:textSize="42sp"
@@ -83,15 +85,17 @@
                 </LinearLayout>
 
                 <LinearLayout
-                    android:layout_width="match_parent"
+                    android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
+                    android:layout_weight="6"
                     android:orientation="vertical">
 
                     <ImageButton
                         android:id="@+id/btn_kid"
-                        android:layout_width="200sp"
-                        android:layout_height="200sp"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
                         android:layout_gravity="center"
                         android:background="@null"
                         android:scaleType="fitCenter"
@@ -102,15 +106,17 @@
 
                     <TextView
                         android:layout_width="wrap_content"
-                        android:layout_height="50sp"
+                        android:layout_height="match_parent"
                         android:layout_gravity="center"
                         android:text="Детям"
+                        android:autoSizeTextType="uniform"
+                        android:autoSizeMinTextSize="6sp"
+                        android:autoSizeMaxTextSize="50sp"
+                        android:autoSizeStepGranularity="2sp"
                         android:textColor="@color/white"
                         android:textAlignment="center"
                         android:textSize="42sp"
                         android:textStyle="bold" />
                 </LinearLayout>
-            </LinearLayout>
-        </LinearLayout>
     </LinearLayout>
 </LinearLayout>

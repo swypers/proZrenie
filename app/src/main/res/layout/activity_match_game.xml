@@ -17,7 +17,8 @@
         android:id="@+id/key_images"
         android:orientation="horizontal"
         android:gravity="center"
-        android:layout_marginBottom="80sp">
+        android:weightSum="13"
+        android:layout_marginBottom="20sp">
         <!--
         <ImageButton
             android:layout_width="120sp"
@@ -30,6 +31,7 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:weightSum="13"
         android:id="@+id/value_images"
         android:orientation="horizontal"
         android:gravity="center">

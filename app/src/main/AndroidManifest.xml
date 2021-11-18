@@ -10,6 +10,12 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.ProZrenie">
         <activity
+            android:name=".CRGActivity"
+            android:exported="true" />
+        <activity
+            android:name=".ChooseRightGameChooseActivity"
+            android:exported="true" />
+        <activity
             android:name=".MatchGameChooseActivity"
             android:exported="true" />
         <activity
