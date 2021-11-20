@@ -51,11 +51,11 @@ public class MatchGameChooseActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_match_game_choose);
-        gamesList.add(new MatchGameType("Подбери заплатку нужной формы", R.drawable.zaplatka_1, imageDictionary[0], R.raw.pohozhi_triangle));
-        gamesList.add(new MatchGameType("Найти каждой лягушке листочек такого же оттенка", R.drawable.frog_4, imageDictionary[1], R.raw.pohozhi_triangle));
-        gamesList.add(new MatchGameType("Подбери  каждому щенку конуру такого же оттенка", R.drawable.dog1, imageDictionary[2], R.raw.pohozhi_triangle));
-        gamesList.add(new MatchGameType("Подбери каждому платью бантик такого же оттенка", R.drawable.dress1, imageDictionary[3], R.raw.pohozhi_triangle));
-        gamesList.add(new MatchGameType("Подбери сапожкам зонтик такого же цвета", R.drawable.umbr1, imageDictionary[4], R.raw.pohozhi_triangle));
+        gamesList.add(new MatchGameType("Подбери заплатку нужной формы", R.drawable.zaplatka_1, imageDictionary[0], R.raw.podberi_zaplatky));
+        gamesList.add(new MatchGameType("Найти каждой лягушке листочек такого же оттенка", R.drawable.frog_4, imageDictionary[1], R.raw.frog_color));
+        gamesList.add(new MatchGameType("Подбери  каждому щенку конуру такого же оттенка", R.drawable.dog1, imageDictionary[2], R.raw.dog_color));
+        gamesList.add(new MatchGameType("Подбери каждому платью бантик такого же оттенка", R.drawable.dress1, imageDictionary[3], R.raw.bant_color));
+        gamesList.add(new MatchGameType("Подбери сапожкам зонтик такого же цвета", R.drawable.umbr1, imageDictionary[4], R.raw.umbr_color));
 
 
         RecyclerView rvDocuments = (RecyclerView) findViewById(R.id.games_list);

@@ -27,7 +27,9 @@ public class ChooseRightGame {
     private Map<Integer, Boolean> mImageDict;
     private Integer mSoundHelp;
     private Integer mImage;
+    private LinearLayout mImageLayout;
     private LinearLayout mKeyLayout;
+    private LinearLayout mKeyLayout2;
     private Context mContext;
     private ImageView mImageView;
     private ImageView mMainImageView;
@@ -47,10 +49,22 @@ public class ChooseRightGame {
     private List<Integer> ChosenImages = new ArrayList<>();
     private Stack<Integer> borderStack = new Stack<>();
     private MediaPlayer mp;
+    LinearLayout.LayoutParams lp_0weight = new LinearLayout.LayoutParams(
+            ViewGroup.LayoutParams.WRAP_CONTENT,
+            ViewGroup.LayoutParams.WRAP_CONTENT,
+            1
+    );
+    LinearLayout.LayoutParams lp_4weight = new LinearLayout.LayoutParams(
+            ViewGroup.LayoutParams.MATCH_PARENT,
+            0,
+            4
+    );
 
 
 
-    public ChooseRightGame(String name, Map<Integer, Boolean> imageDict, LinearLayout keyLayout,
+
+    public ChooseRightGame(String name, Map<Integer, Boolean> imageDict, LinearLayout imageLayout,
+                           LinearLayout keyLayout, LinearLayout keyLayout2,
                            Integer SoundHelp, ImageView imageView, ImageView mainImageView,
                            Integer image, Context context, ImageButton HelpButton,
                            ImageButton BackButton, ImageButton RefreshButton,
@@ -58,7 +72,9 @@ public class ChooseRightGame {
         mName = name; // Название
         mImageDict = imageDict; // Словарь вида id изображения: Boolean
         mSoundHelp = SoundHelp; // Голосовое задание
+        mImageLayout = imageLayout;
         mKeyLayout = keyLayout;
+        mKeyLayout2 = keyLayout2;
         mImageView = imageView; // Изображение с фреймворком
         mMainImageView = mainImageView;
         mContext = context;
@@ -71,16 +87,32 @@ public class ChooseRightGame {
 
     //link to activity
     void onCreate(){
+        mp = MediaPlayer.create(mContext, mSoundHelp);
+        playHelpSound();
         bindButtons();
         fillImageView();
-        mp = MediaPlayer.create(mContext, mSoundHelp);
         // TODO startHelpSound
         ArrayList<Integer> keyImages = new ArrayList<>(getKeys());
         // Random shuffle ArrayLists
         Collections.shuffle(keyImages);
         // Go through lists
-        for(int i=0; i < keyImages.size(); i++){
-            AddImageButtonToLayout(100+i, keyImages.get(i), mKeyLayout);
+        chooseLayoutWeight(keyImages);
+    }
+
+    void chooseLayoutWeight(ArrayList<Integer> iKeyImages){
+        if (iKeyImages.size() > 4)
+        {
+            for (int i = 0; i < 4; i++) {
+                AddImageButtonToLayout(100 + i, iKeyImages.get(i), mKeyLayout);
+            }
+            for (int i = 4; i < iKeyImages.size(); i++) {
+                AddImageButtonToLayout(104 + i, iKeyImages.get(i), mKeyLayout2);
+            }
+        }
+        else {
+            for (int i = 0; i < iKeyImages.size(); i++) {
+                AddImageButtonToLayout(100 + i, iKeyImages.get(i), mKeyLayout);
+            }
         }
     }
 
@@ -121,7 +153,15 @@ public class ChooseRightGame {
     }
 
     private void fillImageView(){
-        mMainImageView.setImageResource(mImage);
+        if (mImage != null) {
+            mMainImageView.setImageResource(mImage);
+        }
+        else {
+            mImageLayout.removeAllViewsInLayout();
+            mImageLayout.setLayoutParams(lp_0weight);
+            mKeyLayout.setLayoutParams(lp_4weight);
+            mKeyLayout2.setLayoutParams(lp_4weight);
+        }
     }
 
     private void playHelpSound(){
@@ -133,7 +173,6 @@ public class ChooseRightGame {
         btn.setImageResource(image);
         btn.setTag(image);
         btn.setScaleType(ImageView.ScaleType.FIT_CENTER);
-        btn.setMaxHeight(240);
         btn.setId(id);
         btn.setBackground(null);
         btn.setLayoutParams(lp);
@@ -172,6 +211,7 @@ public class ChooseRightGame {
             currentButton = mButtonDict.get(id);
             clearButton(currentButton);
         }
+        ChosenImages.clear();
         mResultDict.clear();
         mRefreshButton.setVisibility(View.INVISIBLE);
     }
@@ -190,10 +230,13 @@ public class ChooseRightGame {
 
     private Boolean getResult(){
         EndGame();
-        Log.d("chosenbuttons", ChosenImages.toString());
         for (Integer key: mImageDict.keySet()) {
             if (mImageDict.get(key)){
                 if (!ChosenImages.contains(key))
+                    return false;
+            }
+            else{
+                if (ChosenImages.contains(key))
                     return false;
             }
         }

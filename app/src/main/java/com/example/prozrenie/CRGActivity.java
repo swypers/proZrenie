@@ -16,7 +16,9 @@ import java.util.Map;
 
 public class CRGActivity extends AppCompatActivity {
     ChooseRightGame GameClass;
+    LinearLayout imageLayout;
     LinearLayout keyLayout;
+    LinearLayout keyLayout2;
     String Name;
     Integer Sound;
     Map<Integer, Boolean> imageDictionary = new HashMap<Integer, Boolean>();
@@ -27,13 +29,16 @@ public class CRGActivity extends AppCompatActivity {
     ImageButton backButton;
     ImageButton refreshButton;
     ImageButton checkButton;
+    Boolean showImage;
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_crgactivity);
+        imageLayout = findViewById(R.id.image_layout);
         keyLayout = findViewById(R.id.key_images);
+        keyLayout2 = findViewById(R.id.key_images2);
         imageView = findViewById(R.id.image_view);
         mainImageView = findViewById(R.id.main_image);
         helpButton = findViewById(R.id.help_button);
@@ -47,10 +52,14 @@ public class CRGActivity extends AppCompatActivity {
         Name = intent.getStringExtra("Name");
         Sound = intent.getIntExtra("Sound", 0);
         image = intent.getIntExtra("Image", 0);
+        showImage = intent.getBooleanExtra("showImage", true);
+        if (!showImage)
+            image = null;
         // fill imageDictionary
 
 
-        GameClass = new ChooseRightGame(Name, imageDictionary, keyLayout,
+        GameClass = new ChooseRightGame(Name, imageDictionary,
+                imageLayout, keyLayout, keyLayout2,
                 Sound, imageView, mainImageView, image, this,
                 helpButton, backButton, refreshButton, checkButton);
         GameClass.onCreate();

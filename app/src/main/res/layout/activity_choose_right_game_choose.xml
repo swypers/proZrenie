@@ -13,7 +13,7 @@ tools:context=".ChooseRightGameChooseActivity">
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="@color/purple_200"
-        android:text="Выбери правильное"
+        android:text="Работа с формами"
         android:textAlignment="center"
         android:textColor="@color/white"
         android:textSize="40sp" />
@@ -21,7 +21,6 @@ tools:context=".ChooseRightGameChooseActivity">
     android:id="@+id/games_list"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:layout_marginTop="20sp"
     app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
     />
 </LinearLayout>

@@ -69,9 +69,10 @@ public class MatchingGame {
 
     //link to activity
     void onCreate(){
+        mp = MediaPlayer.create(mContext, mSoundHelp);
+        playHelpSound();
         fillBorderStack();
         bindButtons();
-        mp = MediaPlayer.create(mContext, mSoundHelp);
         // TODO startHelpSound
         ArrayList<Integer> keyImages = new ArrayList<>(getKeys());
         ArrayList<Integer> valImages = new ArrayList<>(getValues());

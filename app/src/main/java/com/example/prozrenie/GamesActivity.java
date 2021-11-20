@@ -15,7 +15,7 @@ public class GamesActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_games);
         gamesList.add(new Games("Найди пару", R.drawable.match_logo, MatchGameChooseActivity.class));
-        gamesList.add(new Games("Выбери нужное", R.drawable.match_logo, ChooseRightGameChooseActivity.class));
+        gamesList.add(new Games("Работа с формами", R.drawable.match_logo, ChooseRightGameChooseActivity.class));
         RecyclerView rvDocuments = (RecyclerView) findViewById(R.id.games_list);
 
         // Initialize contacts

@@ -45,6 +45,7 @@ public class CRGChooseAdapter extends RecyclerView.Adapter<CRGChooseAdapter.View
                                                        intent.putExtra("Image", game_type.getImage());
                                                        intent.putExtra("Name", game_type.getName());
                                                        intent.putExtra("Sound", game_type.getSound());
+                                                       intent.putExtra("showImage", game_type.getShowImage());
                                                        context.startActivity(intent);
                                                    }
                                                }
