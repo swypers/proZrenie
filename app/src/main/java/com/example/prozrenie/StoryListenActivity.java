@@ -10,6 +10,7 @@ import android.util.Log;
 import android.view.View;
 
 import android.widget.Button;
+import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.SeekBar;
 import android.widget.TextView;
@@ -17,7 +18,7 @@ import android.widget.Toast;
 import java.util.concurrent.TimeUnit;
 
 public class StoryListenActivity extends AppCompatActivity {
-    private Button b1,b2,b3,b4;
+    private ImageButton b1,b2,b3,b4;
     private ImageView imageStory;
     private MediaPlayer mediaPlayer;
     private Runnable runnable;
@@ -46,10 +47,10 @@ public class StoryListenActivity extends AppCompatActivity {
         name = intent.getStringExtra("name");
         image = intent.getIntExtra("image", 0);
 
-        b1 = (Button) findViewById(R.id.button);
-        b2 = (Button) findViewById(R.id.button2);
-        b3 = (Button)findViewById(R.id.button3);
-        b4 = (Button)findViewById(R.id.button4);
+        b1 = (ImageButton) findViewById(R.id.button);
+        b2 = (ImageButton) findViewById(R.id.button2);
+        b3 = (ImageButton) findViewById(R.id.button3);
+        b4 = (ImageButton) findViewById(R.id.button4);
         imageStory = (ImageView)findViewById(R.id.imageStory);
         imageStory.setImageResource(image);
 

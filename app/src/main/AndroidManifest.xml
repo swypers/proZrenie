@@ -16,6 +16,9 @@
             android:name=".ChooseRightGameChooseActivity"
             android:exported="true" />
         <activity
+            android:name=".ChooseRightGameChooseActivityNoisy"
+            android:exported="true" />
+        <activity
             android:name=".MatchGameChooseActivity"
             android:exported="true" />
         <activity

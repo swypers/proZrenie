@@ -69,34 +69,38 @@
         android:orientation="horizontal"
         android:gravity="center_horizontal"
         >
-        <Button
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/rewind"
+        <ImageButton
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:background="@drawable/border_filled_purple"
+            android:src="@drawable/rewind_button"
             android:id="@+id/button4"
             android:layout_marginEnd="5sp"
             android:gravity="center"/>
 
-        <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/pause"
-        android:id="@+id/button2"
-        android:layout_marginEnd="5sp"
-        android:gravity="center"/>
+        <ImageButton
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:background="@drawable/border_filled_purple"
+            android:src="@drawable/pause_button"
+            android:id="@+id/button2"
+            android:layout_marginEnd="5sp"
+            android:gravity="center"/>
 
-        <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/back"
-        android:id="@+id/button3"
-        android:layout_marginEnd="5sp"
-        android:gravity="center"/>
+        <ImageButton
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:background="@drawable/border_filled_purple"
+            android:src="@drawable/play_button"
+            android:id="@+id/button3"
+            android:layout_marginEnd="5sp"
+            android:gravity="center"/>
 
-        <Button
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/forward"
+        <ImageButton
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:background="@drawable/border_filled_purple"
+            android:src="@drawable/forward_button"
             android:id="@+id/button"
             android:gravity="center"/>
     </LinearLayout>

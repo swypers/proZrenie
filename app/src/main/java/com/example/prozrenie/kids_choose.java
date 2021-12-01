@@ -14,9 +14,8 @@ public class kids_choose extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_kids_choose);
-        kid_activities.add(new KidActivity("Аудио сказки", R.drawable.music_logo, AudioStoriesActivity.class));
         kid_activities.add(new KidActivity("Игры", R.drawable.kids_game, GamesActivity.class));
-        kid_activities.add(new KidActivity("Игры", R.drawable.music_logo, AudioStoriesActivity.class));
+        kid_activities.add(new KidActivity("Аудио сказки", R.drawable.music_logo, AudioStoriesActivity.class));
         RecyclerView rvDocuments = (RecyclerView) findViewById(R.id.kids_activities_list);
 
         // Initialize contacts
