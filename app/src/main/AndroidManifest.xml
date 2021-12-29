@@ -16,7 +16,16 @@
             android:name=".ChooseRightGameChooseActivity"
             android:exported="true" />
         <activity
+            android:name=".GamesActivity2"
+            android:exported="true" />
+        <activity
+            android:name=".CRGChooseActivityLeftRight"
+            android:exported="true" />
+        <activity
             android:name=".ChooseRightGameChooseActivityNoisy"
+            android:exported="true" />
+        <activity
+            android:name=".GameCategoryChooseActivity"
             android:exported="true" />
         <activity
             android:name=".MatchGameChooseActivity"
@@ -43,13 +52,32 @@
             android:name=".document_choose"
             android:exported="true" />
         <activity
-            android:name=".parents"
+            android:name=".MatchGameSchemeChooseActivity"
             android:exported="true" />
         <activity
-            android:name=".parents_document"
-            android:exported="true"
-            android:label="@string/title_activity_parents_document"
-            android:theme="@style/Theme.ProZrenie.NoActionBar" />
+            android:name=".GamesActivity3WithCategories"
+            android:exported="true" />
+        <activity
+            android:name=".GamesActivity3WithCategoriesSubCats1"
+            android:exported="true" />
+        <activity
+            android:name=".GamesActivity3WithCategoriesSubCats2"
+            android:exported="true" />
+        <activity
+            android:name=".GamesActivity3WithCategoriesSubCats3"
+            android:exported="true" />
+        <activity
+            android:name=".GamesActivity3_4thExtra"
+            android:exported="true" />
+        <activity
+            android:name=".GamesActivity3_ChooseRight"
+            android:exported="true" />
+        <activity
+            android:name=".GamesActivity3_FindPair"
+            android:exported="true" />
+        <activity
+            android:name=".GamesActivity3_SolveExpr"
+            android:exported="true" />
         <activity
             android:name=".MainActivity"
             android:exported="true">

@@ -76,11 +76,11 @@
                         android:text="Родителям"
                         android:autoSizeTextType="uniform"
                         android:autoSizeMinTextSize="6sp"
-                        android:autoSizeMaxTextSize="50sp"
-                        android:autoSizeStepGranularity="2sp"
+                        android:autoSizeMaxTextSize="43sp"
+                        android:autoSizeStepGranularity="4sp"
                         android:textColor="@color/white"
                         android:textAlignment="center"
-                        android:textSize="42sp"
+                        android:textSize="38sp"
                         android:textStyle="bold" />
                 </LinearLayout>
 
@@ -111,11 +111,11 @@
                         android:text="Детям"
                         android:autoSizeTextType="uniform"
                         android:autoSizeMinTextSize="6sp"
-                        android:autoSizeMaxTextSize="50sp"
-                        android:autoSizeStepGranularity="2sp"
+                        android:autoSizeMaxTextSize="43sp"
+                        android:autoSizeStepGranularity="4sp"
                         android:textColor="@color/white"
                         android:textAlignment="center"
-                        android:textSize="42sp"
+                        android:textSize="38sp"
                         android:textStyle="bold" />
                 </LinearLayout>
     </LinearLayout>

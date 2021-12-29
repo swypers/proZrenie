@@ -5,8 +5,9 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:layout_margin="10sp"
-    android:background="@drawable/border_purple"
+    android:background="@drawable/border_purple_document"
     android:paddingBottom="10dp"
+    android:padding="20px"
     >
 
     <TextView
