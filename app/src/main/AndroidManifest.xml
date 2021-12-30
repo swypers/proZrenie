@@ -79,6 +79,12 @@
             android:name=".GamesActivity3_SolveExpr"
             android:exported="true" />
         <activity
+            android:name=".RepeatImageActivity"
+            android:exported="true" />
+        <activity
+            android:name=".GamesActivity3_RepeatImage"
+            android:exported="true" />
+        <activity
             android:name=".MainActivity"
             android:exported="true">
             <intent-filter>

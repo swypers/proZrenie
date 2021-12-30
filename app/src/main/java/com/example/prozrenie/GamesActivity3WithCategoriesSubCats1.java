@@ -14,7 +14,7 @@ public class GamesActivity3WithCategoriesSubCats1 extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_gametype_choose);
-        gamesList.add(new GameCategory("Повтори рисунок", R.drawable.g4th_1_3, GamesActivity3_RepeatImage.class));
+        gamesList.add(new GameCategory("Повтори рисунок", R.drawable.ri_scheme2, GamesActivity3_RepeatImage.class));
 
 
         RecyclerView rvDocuments = (RecyclerView) findViewById(R.id.games_list);

@@ -9,15 +9,17 @@ public class RepeateImageGameType {
     private Integer mSound;
     private Map<Integer, Integer[]> mImageDictionary = new HashMap<Integer, Integer[]>();
     private Boolean mShowImage = true;
+    private Integer[] FieldSize;
 
 
     public RepeateImageGameType(String name, Integer image, Map<Integer, Integer[]> imageDictionary,
-                                Integer Sound, Boolean showImage) {
+                                Integer Sound, Boolean showImage, Integer[] fieldSize) {
         mName = name;
         mImage = image;
         mImageDictionary = imageDictionary;
         mSound = Sound;
         mShowImage = showImage;
+        FieldSize = fieldSize;
     }
 
     public String getName() {
@@ -31,6 +33,8 @@ public class RepeateImageGameType {
     }
 
     public Integer getSound(){ return mSound; }
+
+    public Integer[] getFieldSize() {return FieldSize; }
 
     public Map<Integer, Integer[]> getImageDictionary() {
         return mImageDictionary;
