@@ -67,7 +67,7 @@ public class RepeatImageActivity extends AppCompatActivity {
         GameClass = new RepeatImageGame(Name, imageDictionary,
                 imageLayout, keyLayout, gridLayouts,
                 Sound, imageView, mainImageView, image, this,
-                helpButton, backButton, refreshButton, checkButton, FieldSize);
+                helpButton, backButton, refreshButton, checkButton, FieldSize, R.drawable.blank);
         GameClass.onCreate();
 
     }

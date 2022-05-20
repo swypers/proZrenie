@@ -31,6 +31,10 @@
         android:layout_marginRight="30sp"
         android:layout_weight="1"
         android:textColor="@color/white"
-        android:textSize="50sp"
+        android:autoSizeTextType="uniform"
+        android:autoSizeMinTextSize="6sp"
+        android:autoSizeMaxTextSize="38sp"
+        android:autoSizeStepGranularity="8sp"
+        android:textSize="38sp"
         android:text="TextView" />
 </LinearLayout>

@@ -44,10 +44,13 @@ public class RepeatImageGame {
     private Integer[] mFieldSize;
     private Integer chosenKey = 0;
     private Integer chosenVal = 0;
+    private Integer mGridImage;
 
 
     private Integer borderPressed = drawable.selected_item;
     private Integer borderPurple = drawable.border_purple;
+    private Integer borderBlack = drawable.border_black;
+
 
     private Integer gridImage = drawable.grid;
 
@@ -76,7 +79,7 @@ public class RepeatImageGame {
                            Integer SoundHelp, ImageView imageView, ImageView mainImageView,
                            Integer image, Context context, ImageButton HelpButton,
                            ImageButton BackButton, ImageButton RefreshButton,
-                           ImageButton CheckButton, Integer[] FieldSize) {
+                           ImageButton CheckButton, Integer[] FieldSize, Integer gridImage) {
         mName = name; // Название
         mImageDict = imageDict; // Словарь вида id изображения: Boolean
         mSoundHelp = SoundHelp; // Голосовое задание
@@ -92,6 +95,7 @@ public class RepeatImageGame {
         mRefreshButton = RefreshButton;
         mCheckButton = CheckButton;
         mFieldSize = FieldSize;
+        mGridImage = gridImage;
     }
 
     //link to activity
@@ -117,7 +121,7 @@ public class RepeatImageGame {
     void addGrid(){
         for (int i = 0; i < mFieldSize[0]; i++) {
             for (int j = 0; j < mFieldSize[1]; j++) {
-                AddGridButtonToLayout((i*3)+j+1, drawable.grid, mGridLayouts[i]);
+                AddGridButtonToLayout((i*3)+j+1, mGridImage, mGridLayouts[i]);
             }
         }
     }
@@ -194,14 +198,14 @@ public class RepeatImageGame {
     }
     private void AddGridButtonToLayout(Integer id, Integer image, LinearLayout layout){
         ImageButton btn = new ImageButton(mContext);
-        btn.setImageResource(image);
+        //btn.setImageResource(image);
         btn.setTag(image);
         btn.setId(id);
-        btn.setBackground(null);
-        btn.setScaleType(ImageView.ScaleType.FIT_XY);
+        btn.setScaleType(ImageView.ScaleType.CENTER_INSIDE);
         btn.setBackgroundColor(Color.parseColor("#FFFFFF"));
         LinearLayout.LayoutParams layoutPar = new LinearLayout.LayoutParams(0, ViewGroup.LayoutParams.MATCH_PARENT, 2);
         btn.setLayoutParams(layoutPar);
+        btn.setBackground(mContext.getDrawable(borderBlack));
         btn.setOnClickListener(new View.OnClickListener() {
                                    @Override
                                    public void onClick(View view) {
@@ -211,18 +215,18 @@ public class RepeatImageGame {
         );
         mButtonDict.put(id, btn);
         layout.addView(btn);
+        //btn.setBackground(mContext.getDrawable(borderBlack));
+
     }
 
     private void removeImageFromGridButton(ImageButton btn){
         btn.setTag(gridImage);
-        btn.setImageResource(gridImage);
+        btn.setImageResource(0);
     }
 
     private void onClickItem(View btnView){
         Integer btnID = btnView.getId();
         ImageButton btn = (ImageButton) btnView;
-        Log.d("chosenKey", chosenKey.toString());
-        Log.d("btnID", btnID.toString());
         if(chosenKey==0)
         {
             if (btnID >= 100)
@@ -263,10 +267,6 @@ public class RepeatImageGame {
                 }
             }
         }
-        Log.d("After", "------------------------->");
-        Log.d("chosenKey", chosenKey.toString());
-        Log.d("btnID", btnID.toString());
-        Log.d("RESULT DICT", mResultDict.toString());
     }
 
     private void addResultToDict(Integer Key, Integer Val)
@@ -334,13 +334,15 @@ public class RepeatImageGame {
         btn.setEnabled(true);
     }
     private void clearGridButton(ImageButton btn){
-        btn.setImageResource(gridImage);
-        btn.setTag(gridImage);
+        btn.setImageResource(android.R.color.transparent);
+        btn.setTag(null);
         btn.setEnabled(true);
     }
 
     private Boolean getResult(){
         EndGame();
+        Log.d("resultdict", mResultDict.toString());
+        Log.d("imagedict", mImageDict.toString());
         for (Integer key: mImageDict.keySet()) {
             if(mResultDict.get(key) == null && mImageDict.get(key).length == 0)
             {

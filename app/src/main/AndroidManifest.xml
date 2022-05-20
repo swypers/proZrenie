@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     package="com.example.prozrenie">
 
     <application
@@ -11,82 +12,160 @@
         android:theme="@style/Theme.ProZrenie">
         <activity
             android:name=".CRGActivity"
-            android:exported="true" />
+            android:exported="true"
+            tools:ignore="Instantiatable" />
         <activity
             android:name=".ChooseRightGameChooseActivity"
-            android:exported="true" />
+            android:exported="true"
+            tools:ignore="Instantiatable" />
         <activity
             android:name=".GamesActivity2"
-            android:exported="true" />
+            android:exported="true"
+            tools:ignore="Instantiatable" />
         <activity
             android:name=".CRGChooseActivityLeftRight"
-            android:exported="true" />
+            android:exported="true"
+            tools:ignore="Instantiatable" />
         <activity
             android:name=".ChooseRightGameChooseActivityNoisy"
-            android:exported="true" />
+            android:exported="true"
+            tools:ignore="Instantiatable" />
         <activity
             android:name=".GameCategoryChooseActivity"
-            android:exported="true" />
+            android:exported="true"
+            tools:ignore="Instantiatable" />
         <activity
             android:name=".MatchGameChooseActivity"
-            android:exported="true" />
+            android:exported="true"
+            tools:ignore="Instantiatable" />
         <activity
             android:name=".MatchGameActivity"
-            android:exported="true" />
+            android:exported="true"
+            tools:ignore="Instantiatable" />
         <activity
             android:name=".GamesActivity"
-            android:exported="true" />
+            android:exported="true"
+            tools:ignore="Instantiatable" />
         <activity
             android:name=".StoryListenActivity"
-            android:exported="true" />
+            android:exported="true"
+            tools:ignore="Instantiatable" />
         <activity
             android:name=".AudioStoriesActivity"
-            android:exported="true" />
+            android:exported="true"
+            tools:ignore="Instantiatable" />
         <activity
             android:name=".kids_choose"
-            android:exported="true" />
+            android:exported="true"
+            tools:ignore="Instantiatable" />
         <activity
             android:name=".document_read"
-            android:exported="true" />
+            android:exported="true"
+            tools:ignore="Instantiatable" />
         <activity
             android:name=".document_choose"
-            android:exported="true" />
+            android:exported="true"
+            tools:ignore="Instantiatable" />
         <activity
             android:name=".MatchGameSchemeChooseActivity"
-            android:exported="true" />
+            android:exported="true"
+            tools:ignore="Instantiatable" />
         <activity
             android:name=".GamesActivity3WithCategories"
-            android:exported="true" />
+            android:exported="true"
+            tools:ignore="Instantiatable" />
         <activity
             android:name=".GamesActivity3WithCategoriesSubCats1"
-            android:exported="true" />
+            android:exported="true"
+            tools:ignore="Instantiatable" />
         <activity
             android:name=".GamesActivity3WithCategoriesSubCats2"
-            android:exported="true" />
+            android:exported="true"
+            tools:ignore="Instantiatable" />
         <activity
             android:name=".GamesActivity3WithCategoriesSubCats3"
-            android:exported="true" />
+            android:exported="true"
+            tools:ignore="Instantiatable" />
         <activity
             android:name=".GamesActivity3_4thExtra"
-            android:exported="true" />
+            android:exported="true"
+            tools:ignore="Instantiatable" />
         <activity
             android:name=".GamesActivity3_ChooseRight"
-            android:exported="true" />
+            android:exported="true"
+            tools:ignore="Instantiatable" />
         <activity
             android:name=".GamesActivity3_FindPair"
-            android:exported="true" />
+            android:exported="true"
+            tools:ignore="Instantiatable" />
         <activity
             android:name=".GamesActivity3_SolveExpr"
-            android:exported="true" />
+            android:exported="true"
+            tools:ignore="Instantiatable" />
         <activity
             android:name=".RepeatImageActivity"
-            android:exported="true" />
+            android:exported="true"
+            tools:ignore="Instantiatable" />
         <activity
             android:name=".GamesActivity3_RepeatImage"
-            android:exported="true" />
+            android:exported="true"
+            tools:ignore="Instantiatable" />
         <activity
+            android:name=".GamesActivity3_Maze"
+            android:exported="true"
+            tools:ignore="Instantiatable" />
+        <activity
+            android:name=".GamesActivity3_RememberAndChoose"
+            android:exported="true"
+            tools:ignore="Instantiatable" />
+        <activity
+            android:name=".RememberAndChooseActivity"
+            android:exported="true"
+            tools:ignore="Instantiatable" />
+        <activity
+            android:name=".MazeActivity"
+            android:exported="true"
+            tools:ignore="Instantiatable" />
+        <activity
+            android:name=".GamesActivity4WithCategories"
+            android:exported="true"
+            tools:ignore="Instantiatable" />
+        <activity
+            android:name=".GamesActivity4_FirstSound"
+            android:exported="true"
+            tools:ignore="Instantiatable" />
+        <activity
+            android:name=".GamesActivity4_FindPairAction"
+            android:exported="true"
+            tools:ignore="Instantiatable" />
+        <activity
+            android:name=".GamesActivity4_FindPairSound"
+            android:exported="true"
+            tools:ignore="Instantiatable" />
+        <activity
+            android:name=".GamesActivity4_FindWord"
+            android:exported="true"
+            tools:ignore="Instantiatable" />
+        <activity
+            android:name=".GamesActivity4_FindDescription"
+            android:exported="true"
+            tools:ignore="Instantiatable" />
+        <activity
+            android:name=".GamesActivity5WithCategories"
+            android:exported="true"
+            tools:ignore="Instantiatable" />
+        <activity
+            android:name=".GamesActivity5_ChooseRight"
+            android:exported="true"
+            tools:ignore="Instantiatable" />
+        <activity
+            android:name=".GamesActivity5_ChooseEmotion"
+            android:exported="true"
+            tools:ignore="Instantiatable" />
+z        <activity
             android:name=".MainActivity"
-            android:exported="true">
+            android:exported="true"
+            tools:ignore="Instantiatable">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

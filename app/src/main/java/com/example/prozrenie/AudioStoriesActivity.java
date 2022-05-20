@@ -18,14 +18,14 @@ public class AudioStoriesActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_audio_stories);
-        storiesList.add(new AudioStories("Сказка про белочку припевочку", R.drawable.squirrel, R.raw.story_about_belochka_prip));
-        storiesList.add(new AudioStories("Сказка - случай в лесу", R.drawable.hare, R.raw.situation_in_forest));
+        storiesList.add(new AudioStories("Сказка про белочку-припевочку", R.drawable.squirrel, R.raw.story_about_belochka_prip));
+        storiesList.add(new AudioStories("Сказка \"Случай в лесу\"", R.drawable.hare, R.raw.situation_in_forest));
         storiesList.add(new AudioStories("Сказка про ёжика Витю", R.drawable.hedgehog, R.raw.story_about_ezhik_vitya));
-        storiesList.add(new AudioStories("Сказка о медвежонке", R.drawable.bear, R.raw.story_about_small_bear));
-        storiesList.add(new AudioStories("Сказка о маленьком тигренке", R.drawable.tiger, R.raw.story_about_small_tiger));
+        storiesList.add(new AudioStories("Сказка \"О медвежонке\"", R.drawable.bear, R.raw.story_about_small_bear));
+        storiesList.add(new AudioStories("Сказка \"О маленьком тигренке\"", R.drawable.tiger, R.raw.story_about_small_tiger));
         storiesList.add(new AudioStories("Сказка про Тобика", R.drawable.dog, R.raw.story_about_tobik));
-        storiesList.add(new AudioStories("Сказка роза и ромашка", R.drawable.rose_and_romashka, R.raw.story_rose_romashka));
-        storiesList.add(new AudioStories("Сказка о маленьком гноме", R.drawable.gnome, R.raw.story_small_gnom));
+        storiesList.add(new AudioStories("Сказка \"Роза и ромашка\"", R.drawable.rose_and_romashka, R.raw.story_rose_romashka));
+        storiesList.add(new AudioStories("Сказка \"О маленьком гноме\"", R.drawable.gnome, R.raw.story_small_gnom));
 
 
         RecyclerView rvDocuments = (RecyclerView) findViewById(R.id.stories_list);

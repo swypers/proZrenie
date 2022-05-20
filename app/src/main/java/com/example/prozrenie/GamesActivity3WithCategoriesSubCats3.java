@@ -13,8 +13,8 @@ public class GamesActivity3WithCategoriesSubCats3 extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_gametype_choose);
-        //gamesList.add(new GameCategory("4-ый лишний", R.drawable.g4th_1_3, GamesActivity3_4thExtra.class));
+        setContentView(R.layout.activity_gametype_choose);// TODO CHANGE IMAGE \/
+        gamesList.add(new GameCategory("Запомни фигуры", R.drawable.g_rc_5_1, GamesActivity3_RememberAndChoose.class));
 
 
         RecyclerView rvDocuments = (RecyclerView) findViewById(R.id.games_list);
